@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* Background */
+.background {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: url("../images/index-bg.png") no-repeat center center/cover;
+    filter: brightness(0.45);
+    z-index: -2;
+}
+
+/* Slanted holographic panel */
+.holo-panel {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:
+        translate(-50%, -50%)
+        perspective(1200px)
+        rotateY(-12deg)
+        rotateX(4deg)
+        skewX(-6deg);
+
+    padding: 55px 75px;
+    text-align: center;
+    color: #e8fdff;
+
+    border-radius: 14px;
+
+    /* Dual neon borders */
+    border-left: 3px solid rgba(0, 247, 255, 0.9);   /* Blue */
+    border-top: 3px solid rgba(0, 247, 255, 0.6);
+    border-right: 3px solid rgba(255, 140, 0, 0.9); /* Orange */
+    border-bottom: 3px solid rgba(255, 140, 0, 0.6);
+
+    background: linear-gradient(
+        135deg,
+        rgba(0, 40, 60, 0.45),
+        rgba(40, 20, 0, 0.45)
+    );
+
+    backdrop-filter: blur(10px);
+
+    box-shadow:
+        0 0 18px rgba(0, 247, 255, 0.6),
+        0 0 22px rgba(255, 140, 0, 0.5),
+        inset 0 0 25px rgba(0, 247, 255, 0.35),
+        inset 0 0 20px rgba(255, 140, 0, 0.25);
+}
+
+
+/* Title */
+.holo-panel h1 {
+    font-size: 38px;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    text-shadow:
+        0 0 12px rgba(0, 255, 255, 0.9);
+}
+
+/* Tagline */
+.tagline {
+    font-size: 16px;
+    margin-bottom: 35px;
+    opacity: 0.85;
+}
+.accent-line {
+    width: 120px;
+    height: 2px;
+    margin: 25px auto;
+    background: linear-gradient(to right, #00f7ff, #ff8c00);
+    box-shadow:
+        0 0 10px #00f7ff,
+        0 0 10px #ff8c00;
+}
+
+
+/* Neon button */
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 14px 42px;
+    border-radius: 30px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    transition: 0.3s ease-in-out;
+}
+
+/* Blue neon */
+.neon-blue {
+    color: #00f7ff;
+    border: 2px solid #00f7ff;
+
+    box-shadow:
+        0 0 12px #00f7ff,
+        inset 0 0 12px rgba(0, 247, 255, 0.6);
+}
+
+.neon-blue:hover {
+    background: rgba(0, 247, 255, 0.25);
+    box-shadow:
+        0 0 30px #00f7ff,
+        inset 0 0 22px rgba(0, 247, 255, 0.8);
+    transform: scale(1.06);
+}

@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Emergency Companion System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+</head>
+<body>
+
+    <!-- Background -->
+    <div class="background"></div>
+
+    <!-- Holographic Panel -->
+    <div class="holo-panel">
+        <h1>EMERGENCY<br>COMPANION SYSTEM</h1>
+        <p class="tagline">Your Safety, Our Priority.</p>
+        <div class="accent-line"></div>
+
+
+        <div class="buttons">
+            <a href="{{ url_for('register') }}" class="btn neon-blue">GET STARTED</a>
+        </div>
+    </div>
+
+</body>
+</html>

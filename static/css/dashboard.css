@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* BODY WITH FULL-PAGE BACKGROUND */
+body {
+  height: 100vh;
+  background: url("../images/dashboard-bg.jpg") no-repeat center center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* DASHBOARD CONTENT CONTAINER */
+.dashboard-bg {
+  width: 900px;  /* keeps original size */
+  height: 550px; /* keeps original size */
+  position: relative; /* ensures content layout is unaffected */
+}
+
+/* CONTENT INSIDE PANEL */
+.panel-content {
+  position: absolute;
+  inset: 50px 70px 60px 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+}
+
+/* TITLE */
+.panel-content h1 {
+  color: #ffb36b;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+/* PANIC BUTTON */
+.panic-btn {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #ff3b3b, #8b0000);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 26px;
+  cursor: pointer;
+  box-shadow: 0 0 25px rgba(255, 60, 60, 0.8);
+  animation: pulse 1.5s infinite;
+}
+
+.panic-btn span {
+  font-size: 14px;
+  margin-top: 6px;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.07); }
+  100% { transform: scale(1); }
+}
+
+/* EMERGENCY GRID */
+.emergency-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin: 30px 0;
+  width: 100%;
+}
+
+.emergency-card {
+  background: rgba(0, 0, 0, 0.8);
+  border: 1px solid rgba(255, 180, 100, 0.5);
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+  color: #9ee7ff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.emergency-card i {
+  font-size: 28px;
+  margin-bottom: 6px;
+}
+
+.emergency-card:hover {
+  box-shadow: 0 0 15px rgba(255, 180, 100, 0.8);
+  transform: translateY(-3px);
+}
+
+/* LOCATION BUTTON */
+.location-btn {
+  margin-top: auto;
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
+  border-radius: 14px;
+  border: none;
+  background: linear-gradient(90deg, #6bdcff, #4aa3ff);
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+}
+

@@ -1,0 +1,13 @@
+<h2>Edit Profile</h2>
+
+<form method="POST">
+  <input type="text" name="fullname" value="{{ user.fullname }}" required>
+  <input type="text" name="phone" value="{{ user.phone }}" required>
+
+  <h4>Next of Kin</h4>
+  <input type="text" name="kin_name" value="{{ user.kin_name }}" required>
+  <input type="text" name="kin_phone" value="{{ user.kin_phone }}" required>
+  <input type="text" name="kin_location" value="{{ user.kin_location }}" required>
+
+  <button type="submit">Save Changes</button>
+</form>
